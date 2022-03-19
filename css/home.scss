@@ -34,20 +34,41 @@ header {
                 list-style-type: none;
                 li {
                     margin-left: 36px;
-                    &:first-child{
+                    position: relative;
+                    &:first-child {
                         margin-left: 0;
                     }
+                    &::after {
+                        content: "";
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        background-color: $primary;
+                        position: relative;
+                        transition: 0.3s top ease-in-out;
+                        top: 0;
+                    }
+                    &:hover::after {
+                        height: 1px;
+                        top: 10px;
+                    }
                     a {
-                        font-family: "Josefin Sans";
                         color: black;
+                        font-family: "Josefin Sans";
                         font-size: pxtoem(15);
                         text-decoration: none;
+                        &:hover {
+                            color: $primary;
+                        }
                     }
                 }
             }
         }
         .donate {
             display: flex;
+            span{
+                padding: 14px 35px;
+            }
             .donate-button {
                 display: flex;
             }
