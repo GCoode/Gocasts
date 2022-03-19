@@ -28,7 +28,13 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-bottom: 139px;
+        @include break(1050px){
+            flex-direction: column;
+        }
         .navegation-logo {
+            @include break(1050px){
+                margin-bottom: 15px;
+            }
             span {
                 font-family: "Josefin Sans";
                 font-size: pxtoem(36);
@@ -36,12 +42,23 @@ header {
             }
         }
         nav {
+            @include break(1050px){
+                margin-bottom: 25px;
+            }
             ul {
                 display: flex;
                 list-style-type: none;
+                @include break(490px){
+                    flex-direction: column;
+                }
                 li {
                     margin-left: 36px;
                     position: relative;
+                    @include break(490px){
+                        margin-left: 0;
+                        text-align: center;
+                        margin-bottom: 20px;
+                    }
                     &:first-child {
                         margin-left: 0;
                     }
