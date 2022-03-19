@@ -7,6 +7,7 @@ html(lang="es")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/home.css")
         title Gocast 
     body 
         header 
@@ -14,7 +15,9 @@ html(lang="es")
                 .navegation-header 
                     .navegation-logo 
                         img(src="img/logo/gocast.png")
-
-                    //- nav.navegation 
-                    //-     ul.navegation-ul 
-                    //-     for 
+                        span= gocast 
+                    nav: ul    
+                        for home in menu  
+                            li: a(href="#")=home 
+                    .donate 
+                        
