@@ -280,4 +280,98 @@ header {
             margin-bottom: 40px;
         }
     }
+    .blog-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        margin-bottom: 40px;
+        grid-template-areas: "uno dos tres";
+        @include break(1050px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "uno dos" "tres tres";
+            row-gap: 30px;
+        }
+        @include break(633px){
+            grid-template-columns: 1fr;
+            grid-template-areas: "uno" "dos" "tres";
+        }
+        .blog-item {
+            padding: 42px 37px;
+            border-radius: 6px;
+            box-shadow: 0 5px 10px rgba(62, 62, 62, 0.8);
+            &:first-child {
+                grid-area: uno;
+            }
+            &:nth-child(2) {
+                grid-area: dos;
+            }
+            &:last-child {
+                grid-area: tres;
+            }
+            .blog-title {
+                display: flex;
+                position: relative;
+                margin-bottom: 25px;
+                .blog-title__container {
+                    flex-direction: column;
+                    span {
+                        display: flex;
+                        align-items: center;
+                        font-family: "Josefin Sans";
+                        font-size: pxtoem(16);
+                        margin-bottom: 12px;
+                        color: $primary;
+                        p {
+                            margin-left: 10px;
+                            font-size: pxtoem(14);
+                            color: $grayscale2;
+                        }
+                    }
+                    p {
+                        font-family: "Josefin Sans";
+                        font-size: pxtoem(14);
+                        color: $grayscale2;
+                    }
+                }
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -37px;
+                    width: 2px;
+                    height: 45px;
+                    background-color: $primary;
+                    border: 1.5px solid $primary;
+                }
+            }
+            .blog-head {
+                margin-bottom: 20px;
+                font-size: pxtoem(24);
+                font-weight: 300;
+                font-family: "Josefin Sans";
+            }
+            .blog-lorem {
+                font-size: pxtoem(15);
+                font-family: "Josefin Sans";
+                margin-bottom: 30px;
+            }
+            .blog-readMore {
+                padding: 13px 24px;
+                border-radius: 3px;
+                border: 1px solid $primary;
+                width: max-content;
+                font-family: "Josefin Sans";
+                font-size: pxtoem(14);
+                font-weight: 300;
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+    }
+    .blog-flecha {
+        text-align: center;
+        img {
+            margin: 0 30px;
+            cursor: pointer;
+        }
+    }
 }
