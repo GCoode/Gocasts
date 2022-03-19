@@ -1,23 +1,12 @@
-extends main 
-block head 
-    link(rel="stylesheet", href="css/home.css")
-    title Gocast 
-    
-block nav 
-    - const gocast = "GOCAST";
-    - const menu = ["Home", "About", "Episode", "Blog", "Pages", "Contact"]
-    .navegation-header 
-        .navegation-logo 
-            img(src="img/logo/gocast.png")
-            span= gocast 
-        nav: ul    
-            for home in menu  
-                li: a(href="#")=home 
-        .donate 
-            h3 suscribe 
-            .donate-button 
-                img(src="img/logo/donate.png")
-                h3 donate 
-
-
-
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/home.css")
+        title Home 
+    body
+        header 
+            .container 
+                include nav
