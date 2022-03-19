@@ -1,3 +1,23 @@
+$primary: #ff5300;
+$secondary: #f5f5f5;
+$tertiary: #e5e5e5;
+$grayscale1: #c2c2c2;
+$grayscale2: #acacac;
+$grayscale3: #999999;
+$black1: #222222;
+$black2: #555555;
+$black3: #777777;
+
+@function pxtoem($pixel) {
+    @return ($pixel / 16) * 1em;
+}
+
+@mixin break($pixel) {
+    @media (max-width: $pixel) {
+        @content;
+    }
+}
+
 *,
 *::before,
 *::after {
