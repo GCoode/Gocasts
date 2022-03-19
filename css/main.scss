@@ -1,17 +1,15 @@
-$primary: #ff5300;
-$secondary: #f5f5f5;
-$tertiary: #e5e5e5;
-$grayscale1: #c2c2c2;
-$grayscale2: #acacac;
-$grayscale3: #999999;
-$black1: #222222;
-$black2: #555555;
-$black3: #777777;
-
 *,
 *::before,
 *::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+}
+.container {
+    max-width: 1280px;
+    width: 90%;
+    margin: 0 auto;
 }
