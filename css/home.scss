@@ -123,24 +123,29 @@ header {
     background-color: white;
     position: relative;
     padding: 55px 70px;
-    @include break(1305px){
+    margin-bottom: 100px;
+    @include break(1305px) {
         margin-top: 0;
         box-shadow: 0 0 0;
+    }
+    @include break(490px) {
+        padding: 55px 0;
     }
     .episode-title {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 39px;
-        @include break(633px){
+        @include break(633px) {
             flex-direction: column;
         }
         h2 {
             font-family: "Josefin Sans";
             font-family: 300;
             font-size: pxtoem(32);
-            @include break(633px){
+            @include break(633px) {
                 margin-bottom: 10px;
+                font-size: pxtoem(28);
             }
         }
         p {
@@ -174,9 +179,23 @@ header {
                 display: flex;
                 align-items: center;
                 grid-area: player;
-                @include break(1275px){
+                @include break(1275px) {
                     width: 100%;
                     justify-content: space-between;
+                }
+                @include break(633px) {
+                    flex-direction: column;
+                    img {
+                        margin-bottom: 15px;
+                    }
+                    .episode-items__texts {
+                        h3 {
+                            text-align: center;
+                        }
+                        p {
+                            text-align: center;
+                        }
+                    }
                 }
                 img {
                     margin-right: 11px;
@@ -220,6 +239,10 @@ header {
                     display: flex;
                     justify-content: space-between;
                     margin-bottom: 40px;
+                }
+                @include break(560px) {
+                    flex-direction: column;
+                    align-items: center;
                 }
                 p {
                     font-family: "Josefin Sans";
