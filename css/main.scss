@@ -27,6 +27,9 @@ $black3: #777777;
 }
 body {
     font-size: 16px;
+    @include break(633px){
+        font-size: 14px;
+    }
 }
 .container {
     max-width: 1280px;

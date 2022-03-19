@@ -3,6 +3,9 @@
 header {
     background-color: $secondary;
     padding-top: 43px;
+    @include break(1305px){
+        padding: 43px 0;
+    }
     @import "nav";
     .main-header {
         display: flex;
@@ -27,6 +30,10 @@ header {
                     font-weight: 300;
                     font-size: pxtoem(52);
                     margin-bottom: 25px;
+                    @include break(1305px) {
+                        max-width: 100%;
+                        text-align: center;
+                    }
                 }
                 p {
                     max-width: 590px;
@@ -34,9 +41,18 @@ header {
                     font-family: "Josefin San";
                     font-size: pxtoem(16);
                     color: $black2;
+                    @include break(1305px) {
+                        max-width: 100%;
+                        text-align: center;
+                    }
                 }
             }
             .play {
+                display: flex;
+                justify-content: center;
+                @include break(633px){
+                    display: none;
+                }
                 img {
                     margin-bottom: 50px;
                 }
@@ -56,6 +72,9 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                @include break(633px){
+                    flex-direction: column;
+                }
                 .spotify,
                 .podcast,
                 .apple {
@@ -63,6 +82,9 @@ header {
                     padding: 8px 20px 8px 10px;
                     height: 50px;
                     display: flex;
+                    @include break(633px){
+                        margin-bottom: 20px;
+                    }
                     img {
                         width: 35px;
                         height: 35px;
@@ -88,6 +110,9 @@ header {
         }
         .people-header {
             margin-top: -147px;
+            @include break(1305px) {
+                display: none;
+            }
         }
     }
 }
