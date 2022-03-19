@@ -271,4 +271,13 @@ header {
     }
 }
 .blog_posts {
+    .title {
+        h3 {
+            font-family: "Josefin Sans";
+            font-size: pxtoem(32);
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+    }
 }
