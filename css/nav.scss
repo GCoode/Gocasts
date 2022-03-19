@@ -1,0 +1,98 @@
+.navegation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 139px;
+    @include break(1050px) {
+        flex-direction: column;
+    }
+    .navegation-logo {
+        @include break(1050px) {
+            margin-bottom: 15px;
+        }
+        span {
+            font-family: "Josefin Sans";
+            font-size: pxtoem(36);
+            font-weight: bold;
+        }
+    }
+    nav {
+        @include break(1050px) {
+            margin-bottom: 25px;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            @include break(490px) {
+                flex-direction: column;
+            }
+            li {
+                margin-left: 36px;
+                position: relative;
+                @include break(490px) {
+                    margin-left: 0;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &::after {
+                    content: "";
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    background-color: $primary;
+                    position: relative;
+                    transition: 0.3s top ease-in-out;
+                    top: 0;
+                }
+                &:hover::after {
+                    height: 1px;
+                    top: 10px;
+                }
+                a {
+                    color: black;
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(15);
+                    text-decoration: none;
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+    .donate {
+        display: flex;
+        .donate-suscribe {
+            padding: 14px 35px;
+            background-color: $primary;
+            color: white;
+            text-transform: capitalize;
+            font-family: "Josefin Sans";
+            font-size: pxtoem(14);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .donate-button {
+            padding: 12px 28px;
+            display: flex;
+            align-items: center;
+            border: 1px solid $primary;
+            border-radius: 3px;
+            margin-left: 31px;
+            cursor: pointer;
+            img {
+                margin-right: 5px;
+            }
+            span {
+                text-transform: capitalize;
+                font-family: "Josefin Sans";
+                font-size: pxtoem(14);
+                font-weight: 300;
+                color: $primary;
+            }
+        }
+    }
+}
