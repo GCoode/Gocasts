@@ -3,7 +3,7 @@
 header {
     background-color: $secondary;
     padding-top: 43px;
-    @include break(1305px){
+    @include break(1305px) {
         padding: 43px 0;
     }
     @import "nav";
@@ -50,7 +50,7 @@ header {
             .play {
                 display: flex;
                 justify-content: center;
-                @include break(633px){
+                @include break(633px) {
                     display: none;
                 }
                 img {
@@ -72,7 +72,7 @@ header {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                @include break(633px){
+                @include break(633px) {
                     flex-direction: column;
                 }
                 .spotify,
@@ -82,7 +82,7 @@ header {
                     padding: 8px 20px 8px 10px;
                     height: 50px;
                     display: flex;
-                    @include break(633px){
+                    @include break(633px) {
                         margin-bottom: 20px;
                     }
                     img {
@@ -113,6 +113,137 @@ header {
             @include break(1305px) {
                 display: none;
             }
+        }
+    }
+}
+.episode {
+    box-shadow: 0 10px 20px rgba(62, 62, 62, 0.8);
+    border-radius: 8px;
+    margin-top: -80px;
+    background-color: white;
+    position: relative;
+    padding: 55px 70px;
+    @include break(1305px){
+        margin-top: 0;
+        box-shadow: 0 0 0;
+    }
+    .episode-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 39px;
+        @include break(633px){
+            flex-direction: column;
+        }
+        h2 {
+            font-family: "Josefin Sans";
+            font-family: 300;
+            font-size: pxtoem(32);
+            @include break(633px){
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            padding: 14px 22px;
+            background-color: $primary;
+            color: white;
+            font-family: "Josefin Sans";
+            font-size: pxtoem(14);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    }
+    .episode-items {
+        .episode-item {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 10px;
+            grid-template-areas: "player line chapter";
+            &:last-child {
+                margin-bottom: 57px;
+            }
+            @include break(1275px) {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "player"
+                    "line"
+                    "chapter";
+            }
+            .episode-items__go {
+                display: flex;
+                align-items: center;
+                grid-area: player;
+                @include break(1275px){
+                    width: 100%;
+                    justify-content: space-between;
+                }
+                img {
+                    margin-right: 11px;
+                }
+                .episode-items__texts {
+                    h3 {
+                        font-family: "Josefin Sans";
+                        font-weight: 300;
+                        font-size: pxtoem(24);
+                        margin-bottom: 19px;
+                        width: 100%;
+                    }
+                    p {
+                        max-width: 526px;
+                        width: 90%;
+                        font-family: "Josefin Sans";
+                        font-size: pxtoem(15);
+                    }
+                    img {
+                        @include break(1040px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            .episode-line {
+                background-color: $tertiary;
+                width: 1px;
+                height: 120px;
+                grid-area: line;
+                @include break(1275px) {
+                    height: 1px;
+                    width: 100%;
+                    margin: 20px 0;
+                }
+            }
+            .episode-season {
+                grid-area: chapter;
+                @include break(1275px) {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 40px;
+                }
+                p {
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(14);
+                    color: $grayscale1;
+                    margin-bottom: 15px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    .episode-show {
+        display: flex;
+        justify-content: center;
+        span {
+            padding: 13px 19px;
+            color: $primary;
+            border: 1px solid $primary;
+            border-radius: 3px;
+            font-family: "Josefin Sans";
+            font-size: pxtoem(14);
+            font-weight: 300;
         }
     }
 }
