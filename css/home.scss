@@ -14,6 +14,12 @@ $black3: #777777;
     @return ($pixel / 16) * 1em;
 }
 
+@mixin break($pixel) {
+    @media (max-width: $pixel) {
+        @content;
+    }
+}
+
 header {
     background-color: $secondary;
     padding-top: 43px;
@@ -21,6 +27,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 139px;
         .navegation-logo {
             span {
                 font-family: "Josefin Sans";
@@ -66,11 +73,34 @@ header {
         }
         .donate {
             display: flex;
-            span{
+            .donate-suscribe {
                 padding: 14px 35px;
+                background-color: $primary;
+                color: white;
+                text-transform: capitalize;
+                font-family: "Josefin Sans";
+                font-size: pxtoem(14);
+                border-radius: 3px;
+                cursor: pointer;
             }
             .donate-button {
+                padding: 12px 28px;
                 display: flex;
+                align-items: center;
+                border: 1px solid $primary;
+                border-radius: 3px;
+                margin-left: 31px;
+                cursor: pointer;
+                img {
+                    margin-right: 5px;
+                }
+                span {
+                    text-transform: capitalize;
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(14);
+                    font-weight: 300;
+                    color: $primary;
+                }
             }
         }
     }
