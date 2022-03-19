@@ -36,6 +36,37 @@ header {
                     color: $black2;
                 }
             }
+            .play {
+                img {
+                    margin-bottom: 50px;
+                }
+            }
+            .listen-on {
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+                p {
+                    margin-right: 4px;
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(14);
+                    color: $primary;
+                }
+            }
+            .apps {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .spotify,
+                .podcast,
+                .apple {
+                    border: 1px solid $tertiary;
+                    padding: 8px 10px;
+                    display: flex;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
         }
     }
 }
