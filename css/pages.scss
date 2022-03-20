@@ -1,0 +1,33 @@
+@import "main";
+
+header {
+    padding-top: 43px;
+    @import "components/nav";
+}
+.pages{
+    width: 100%;
+    max-width: 705px;
+    margin: 0 auto;
+    .pages-container{
+        .pages-title{
+            margin-bottom: 25px;
+        }
+        .pages-address{
+            display: flex;
+            span{
+                &:first-child{
+                    color: $primary;
+                    margin-right: 8px;
+                }
+                &:last-child{
+                    margin-right: 8px;
+                    font-size: pxtoem(14);
+                }
+            }
+            .pages-address__time{
+                    
+            }
+        }
+    }
+}
+@import "components/footer.scss"
