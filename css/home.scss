@@ -271,6 +271,7 @@ header {
     }
 }
 .blog_posts {
+    margin-bottom: 100px;
     .title {
         h3 {
             font-family: "Josefin Sans";
@@ -291,7 +292,7 @@ header {
             grid-template-areas: "uno dos" "tres tres";
             row-gap: 30px;
         }
-        @include break(633px){
+        @include break(633px) {
             grid-template-columns: 1fr;
             grid-template-areas: "uno" "dos" "tres";
         }
@@ -372,6 +373,34 @@ header {
         img {
             margin: 0 30px;
             cursor: pointer;
+        }
+    }
+}
+.gallery {
+    .gallery-items {
+        .gallery-text {
+            h2 {
+                font-family: "Josefin Sans";
+                font-size: pxtoem(32);
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 31px;
+            }
+        }
+        .gallery-photo {
+            .gallery-photo__container {
+                display: grid;
+                grid-template-areas:
+                    "uno dos tres cuato"
+                    "cinco dos seis siete"
+                    "ocho nueve diez siete";
+                img {
+                    
+                    &:last-child {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }
