@@ -4,30 +4,59 @@ header {
     padding-top: 43px;
     @import "components/nav";
 }
-.pages{
+.pages {
     width: 100%;
     max-width: 705px;
     margin: 0 auto;
-    .pages-container{
-        .pages-title{
+    .pages-container {
+        .pages-title {
             margin-bottom: 25px;
         }
-        .pages-address{
+        .pages-address {
+            margin-bottom: 40px;
             display: flex;
-            span{
-                &:first-child{
-                    color: $primary;
-                    margin-right: 8px;
-                }
-                &:last-child{
-                    margin-right: 8px;
-                    font-size: pxtoem(14);
+            .granada {
+                color: $primary;
+                margin-right: 8px;
+            }
+            .granada-2 {
+                margin-right: 8px;
+                font-size: pxtoem(14);
+                color: $grayscale2;
+            }
+            .pages-address__time {
+                span {
+                    color: $grayscale2;
                 }
             }
-            .pages-address__time{
-                    
+        }
+        .pages-text {
+            margin-bottom: 41px;
+            p {
+                color: $black2;
+                margin-bottom: 35px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .pages-h3 {
+            height: 104px;
+            width: 100%;
+            margin-bottom: 50px;
+            border-left: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h3 {
+                font-size: pxtoem(22);
+                font-style: italic;
+                font-weight: 300;
+                line-height: 30px;
+                max-width: 530px;
+                width: 100%;
             }
         }
     }
 }
-@import "components/footer.scss"
+@import "components/footer.scss";
