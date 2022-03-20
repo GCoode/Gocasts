@@ -1,0 +1,32 @@
+- const episodeH1 = "Episodes"
+- const episodeSpan = "Home / Episodes"
+- const podcasts = ['../img/podcast/dog.png', '../img/podcast/book.png', '../img/podcast/door.png', '../img/podcast/dog.png', '../img/podcast/book.png'];
+- const podcastsTitle = ["Visiting my best friend's city for first time", 'An interesting read I definitely recommend', 'What if all my adventures go back home?', "Visiting my best friend's city for first time", 'An interesting read I definitely recommend']
+- const podcastText = "All Podcast Episodes"
+include components/episode
+
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/episodes.css")
+        title Episodes
+    body 
+        header 
+            .container 
+                include components/nav
+                .episode-h1 
+                    h1= episodeH1
+                    span= episodeSpan
+        .podcast    
+            .container 
+                .podcast-container 
+                    .podcast-text 
+                        h2= podcastText
+                    .podcast-mixin
+                        for visiting, indice in podcasts
+                            +episode(visiting,podcastsTitle[indice])
+
+        
