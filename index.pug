@@ -1,3 +1,5 @@
+- const galleryitems = ["img/gallery/1.png", "img/gallery/2.png", "img/gallery/3.png", "img/gallery/4.png", "img/gallery/5.png", "img/gallery/6.png", "img/gallery/7.png", "img/gallery/8.png", "img/gallery/9.png"]
+
 doctype html
 html(lang="en")
     head
@@ -89,9 +91,9 @@ html(lang="en")
                     .gallery-text 
                         h2 Instagram feeds
                     .gallery-photo 
-                        for gallery in ["img/gallery/1.png", "img/gallery/2.png", "img/gallery/3.png", "img/gallery/4.png", "img/gallery/5.png", "img/gallery/6.png", "img/gallery/7.png", "img/gallery/8.png", "img/gallery/9.png"]
+                        for gallery in galleryitems 
                             .gallery-photo__container 
-                                img(src=gallery)
+                                img.photo-container__grid(src=gallery)
                                 img(src="img/gallery/llave.png")
         article.new-episode 
             .container 
