@@ -83,5 +83,26 @@ html(lang="en")
                 .blog-flecha 
                     img(src="img/blog/left.png")
                     img(src="img/blog/right.png")
-
+        .gallery 
+            .container 
+                .gallery-items 
+                    .gallery-text 
+                        h2 Instagram feeds
+                    .gallery-photo 
+                        for gallery in ["img/gallery/1.png", "img/gallery/2.png", "img/gallery/3.png", "img/gallery/4.png", "img/gallery/5.png", "img/gallery/6.png", "img/gallery/7.png", "img/gallery/8.png", "img/gallery/9.png"]
+                            .gallery-photo__container 
+                                img(src=gallery)
+                                img(src="img/gallery/llave.png")
+        article.new-episode 
+            .container 
+                .episode-container 
+                    .episode-text-items 
+                        h2 New Episode Every Week!
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed.
+                    .episode-navegation 
+                        .episode-navegation__input
+                            input(type="emaii" placeholder="Type Your Email")
+                            .episode-button 
+                                button(type="submit") Suscribe 
+                                img(src="img/gallery/right.png")
         
