@@ -396,9 +396,11 @@ header {
                 "ocho nueve diez siete";
             gap: 20px;
             img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
+                &:last-child {
+                    display: none;
+                }
+            }
+            .gallery-photo__container {
                 &:first-child {
                     grid-area: uno;
                 }
@@ -428,6 +430,11 @@ header {
                 }
                 &:nth-child(10) {
                     grid-area: diez;
+                }
+                .photo-container__grid {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
                 }
             }
         }
