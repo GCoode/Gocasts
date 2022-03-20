@@ -1,0 +1,98 @@
+@import "main";
+
+header {
+    padding-top: 43px;
+    background: url("../img/header/background-about.png") #f9f9f9 no-repeat;
+    @import "components/nav";
+    .about-h1 {
+        text-align: center;
+        font-family: "Josefin Sans";
+        padding-bottom: 196px;
+        h1 {
+            text-decoration: underline;
+            margin-bottom: 11px;
+            font-size: pxtoem(42);
+        }
+        span {
+            font-size: pxtoem(14);
+        }
+    }
+}
+.main {
+    margin-bottom: 91px;
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "image description";
+        margin-top: 56px;
+        @include break(1040px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "description" "image";
+        }
+        .main-people {
+            grid-area: image;
+            img {
+                margin-top: -156px;
+                @include break(1040px) {
+                    margin-top: 0;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .main-text {
+            grid-area: description;
+            font-family: "Josefin Sans";
+            @include break(1040px) {
+                margin-bottom: 40px;
+            }
+            h2 {
+                max-width: 626px;
+                width: 100%;
+                font-size: pxtoem(32);
+                font-family: 300;
+                margin-bottom: 40px;
+                @include break(1040px) {
+                    max-width: 100%;
+                }
+            }
+            .main-text__p {
+                p {
+                    max-width: 516px;
+                    width: 100%;
+                    font-size: pxtoem(15);
+                    margin-bottom: 35px;
+                    @include break(1040px) {
+                        max-width: 100%;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.about-ico {
+    margin-bottom: 68px;
+    .about-ico__container {
+        .about-ico__container__text {
+            h2 {
+                font-family: "Josefin Sans";
+                font-size: pxtoem(32);
+                text-align: center;
+                margin-bottom: 40px;
+            }
+        }
+        .about-ico__container-photo {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            img {
+                margin: 0 15px 32px
+            }
+        }
+    }
+}
+@import "components/footer";
