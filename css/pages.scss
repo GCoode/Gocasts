@@ -57,6 +57,42 @@ header {
                 width: 100%;
             }
         }
+        .pages-newH3 {
+            margin-bottom: 50px;
+            h3 {
+                font-size: pxtoem(22);
+                font-weight: 300;
+            }
+        }
+        .pages-other__text {
+            p.granada2 {
+                font-size: pxtoem(15);
+                margin-bottom: 20px;
+            }
+            .pages-other__text-items {
+                p {
+                    font-size: pxtoem(15);
+                    margin-bottom: 31px;
+                    line-height: 30px;
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        background-color: $primary;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+        .pages-comments {
+            h3 {
+                font-size: pxtoem(24);
+                font-weight: 300;
+                margin-bottom: 20px;
+            }
+        }
     }
 }
 @import "components/footer.scss";
