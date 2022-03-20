@@ -6,44 +6,49 @@
 footer 
     .container 
         .footer-container 
-            .footer-logo 
-                img(src="img/footer/logo.png")
-                h2=gocasts 
-            .footer-lorem 
-                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-            .footer-socials 
-                h3 socials 
+            .footer_column1
+                .footer-logo 
+                    img(src="img/footer/logo.png")
+                    h2=gocasts 
+                .footer-lorem 
+                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+                .footer-socials 
+                    h3 socials 
                     .footer-socials__redes 
                         for redes in socials
                             img(src=redes)
-            .footer-list__pages 
-                h3 pages 
-                ul.footer-ul__pages 
-                for pagesitems in listpages
-                    li: a(href="#")= pagesitems
-            .footer-list__recent 
-                h3 Recent Episodes
-                ul.footer-ul__recent 
-                for recentitems in listrecent
-                    li: a(href="#")= recentitems 
-            .footer-listen 
-                h3 Listen My Podcasts Also In
-                .footer-listen__container 
-                    img(src="img/footer/podcast.png")
-                    .footer-listen__text 
-                        span Listen on 
-                        p Google Podcast 
-                .footer-listen__container 
-                    img(src="img/footer/apple.png")
-                    .footer-listen__text 
-                        span Listen on 
-                        p Apple Podcast
-                .footer-listen__container 
-                    img(src="img/footer/spotify.png")
-                    .footer-listen__text 
-                        span Listen on 
-                        p Spotify 
+            .footer-column2 
+                .footer-list__pages 
+                    h3 pages 
+                    ul.footer-ul__pages 
+                        for pagesitems in listpages
+                            li: a(href="#")= pagesitems
+            .footer-column3
+                .footer-list__recent 
+                    h3 Recent Episodes
+                    ul.footer-ul__recent 
+                        for recentitems in listrecent
+                            li: a(href="#")= recentitems 
+            .footer-column4
+                .footer-listen 
+                    h3 Listen My Podcasts Also In
+                    .footer-listen__container 
+                        img(src="img/footer/podcast.png")
+                        .footer-listen__text 
+                            span Listen on 
+                            p Google Podcast 
+                    .footer-listen__container 
+                        img(src="img/footer/apple.png")
+                        .footer-listen__text 
+                            span Listen on 
+                            p Apple Podcast
+                    .footer-listen__container 
+                        img(src="img/footer/spotify.png")
+                        .footer-listen__text 
+                            span Listen on 
+                            p Spotify 
         .footer-copyright 
+            .footer-line-copy
             p @2020 Themefisher All Rights Reserved | Design By : Themefisher.designer
 
                 

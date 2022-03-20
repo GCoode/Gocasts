@@ -1,0 +1,139 @@
+footer {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 85px;
+        gap: 20px;
+        @include break(1275px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include break(1040px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include break(633px) {
+            justify-items: center;
+            grid-template-columns: 1fr;
+        }
+        .footer_column1 {
+            .footer-logo {
+                display: flex;
+                align-items: center;
+                margin-bottom: 27px;
+                @include break(633px) {
+                    justify-content: center;
+                }
+                h2 {
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(36);
+                    font-weight: bold;
+                }
+            }
+            .footer-lorem {
+                margin-bottom: 25px;
+                p {
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(14);
+                    max-width: 321px;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .footer-socials {
+                h3 {
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(16);
+                    text-transform: capitalize;
+                    margin-bottom: 20px;
+                    @include break(633px) {
+                        text-align: center;
+                    }
+                }
+                .footer-socials__redes {
+                    @include break(633px) {
+                        display: flex;
+                        justify-content: center;
+                    }
+                    img {
+                        margin: 0 13.5px;
+                        &:first-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-column2,
+        .footer-column3 {
+            .footer-list__pages,
+            .footer-list__recent {
+                h3 {
+                    text-transform: capitalize;
+                    font-family: "Josefin Sans";
+                    font-size: pxtoem(16);
+                    margin-bottom: 32px;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        margin-bottom: 26px;
+                        @include break(633px) {
+                            text-align: center;
+                        }
+                        a {
+                            text-transform: capitalize;
+                            font-family: "Josefin Sans";
+                            font-size: pxtoem(14);
+                            text-decoration: none;
+                            color: $tertiary;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-column4 {
+            .footer-listen {
+                h3 {
+                    font-size: pxtoem(16);
+                    text-transform: capitalize;
+                    font-family: "Josefin Sans";
+                    margin-bottom: 30px;
+                }
+                .footer-listen__container {
+                    border: 1px solid $tertiary;
+                    padding: 8px 20px 8px 10px;
+                    height: 50px;
+                    display: flex;
+                    margin-bottom: 15px;
+                    img {
+                        width: 35px;
+                        height: 35px;
+                        margin-right: 10px;
+                    }
+                    span {
+                        font-family: "Josefin Sans";
+                        color: $grayscale3;
+                    }
+                    p {
+                        text-transform: capitalize;
+                        color: black;
+                        font-size: pxtoem(20);
+                    }
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        margin-bottom: 55px;
+        .footer-line-copy {
+            width: 100%;
+            height: 1px;
+            background-color: $grayscale1;
+            margin-bottom: 55px;
+        }
+        p {
+            font-family: "Josefin Sans";
+            text-align: center;
+            font-size: pxtoem(14);
+        }
+    }
+}
