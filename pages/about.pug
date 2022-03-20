@@ -1,0 +1,38 @@
+- const titleAbout = "About Me" 
+- const homeAbout = "Home / About"
+
+
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="../css/about.css")
+        title About
+    body 
+        header 
+            .container 
+                include components/nav
+                .about-h1
+                    h1= titleAbout
+                    span= homeAbout
+        .main 
+            .container 
+                .main-container 
+                    .main-people 
+                        img(src="../img/header/people-front.png")
+                    .main-text 
+                        h2 Hello There My Name is Gerry Castin And I Love To Talk (Most Of The Time)
+                        .main-text__p 
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                            
+
+
+
+
+
+        footer 
+            include components/footer
