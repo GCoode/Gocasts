@@ -57,6 +57,21 @@ header {
                 width: 100%;
             }
         }
+        .pages-newH3 {
+            margin-bottom: 50px;
+            h3 {
+                font-size: pxtoem(22);
+                font-weight: 300;
+            }
+        }
+        .pages-other__text {
+            p {
+                &:first-child {
+                    font-size: pxtoem(15);
+                    margin-bottom: 20px;
+                }
+            }
+        }
     }
 }
 @import "components/footer.scss";
