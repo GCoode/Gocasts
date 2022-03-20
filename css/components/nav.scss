@@ -11,7 +11,6 @@
             margin-bottom: 15px;
         }
         span {
-            font-family: "Josefin Sans";
             font-size: pxtoem(36);
             font-weight: bold;
         }
@@ -53,7 +52,7 @@
                 }
                 a {
                     color: black;
-                    font-family: "Josefin Sans";
+
                     font-size: pxtoem(15);
                     text-decoration: none;
                     &:hover {
@@ -70,7 +69,6 @@
             background-color: $primary;
             color: white;
             text-transform: capitalize;
-            font-family: "Josefin Sans";
             font-size: pxtoem(14);
             border-radius: 3px;
             cursor: pointer;
@@ -88,7 +86,7 @@
             }
             span {
                 text-transform: capitalize;
-                font-family: "Josefin Sans";
+
                 font-size: pxtoem(14);
                 font-weight: 300;
                 color: $primary;

@@ -24,10 +24,11 @@ $black3: #777777;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Josefin Sans";
 }
 body {
     font-size: 16px;
-    @include break(633px){
+    @include break(633px) {
         font-size: 14px;
     }
 }
