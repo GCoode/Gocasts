@@ -395,12 +395,37 @@ header {
                 "cinco dos seis siete"
                 "ocho nueve diez siete";
             gap: 20px;
-            img {
-                &:last-child {
-                    display: none;
-                }
+            @include break(1050px) {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                    "uno dos tres"
+                    "siete dos seis"
+                    "siete nueve diez"
+                    "cuatro ocho cinco";
             }
             .gallery-photo__container {
+                overflow: hidden;
+
+                .gallery-photo-container__grid-llave {
+                    position: relative;
+                    top: 0;
+                    background-color: rgba(0,0,0,.6);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    text-align: center;
+                    .gallery-photo-container__grid-llave {
+                        transition: 0.3s top ease-in-out;
+                        top: -100%;
+                    }
+                }
+
                 &:first-child {
                     grid-area: uno;
                 }
