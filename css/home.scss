@@ -16,7 +16,7 @@ header {
                 margin-bottom: 20px;
                 p {
                     color: $primary;
-                    font-family: "Josefin San";
+
                     font-size: pxtoem(14);
                     margin-left: 5.5px;
                 }
@@ -26,7 +26,7 @@ header {
                 h1 {
                     max-width: 708px;
                     width: 100%;
-                    font-family: "Josefin Sans";
+
                     font-weight: 300;
                     font-size: pxtoem(52);
                     margin-bottom: 25px;
@@ -38,7 +38,7 @@ header {
                 p {
                     max-width: 590px;
                     width: 100%;
-                    font-family: "Josefin San";
+
                     font-size: pxtoem(16);
                     color: $black2;
                     @include break(1305px) {
@@ -63,7 +63,7 @@ header {
                 margin-bottom: 25px;
                 p {
                     margin-right: 4px;
-                    font-family: "Josefin Sans";
+
                     font-size: pxtoem(14);
                     color: $primary;
                 }
@@ -94,7 +94,6 @@ header {
                     .podcast-text,
                     .apple-text {
                         p {
-                            font-family: "Josefin Sans";
                             color: $grayscale3;
                         }
                         span {
@@ -138,8 +137,7 @@ header {
             flex-direction: column;
         }
         h2 {
-            font-family: "Josefin Sans";
-            font-family: 300;
+            font-weight: 300;
             font-size: pxtoem(32);
             @include break(633px) {
                 margin-bottom: 10px;
@@ -150,7 +148,7 @@ header {
             padding: 14px 22px;
             background-color: $primary;
             color: white;
-            font-family: "Josefin Sans";
+
             font-size: pxtoem(14);
             border-radius: 3px;
             cursor: pointer;
@@ -200,7 +198,6 @@ header {
                 }
                 .episode-items__texts {
                     h3 {
-                        font-family: "Josefin Sans";
                         font-weight: 300;
                         font-size: pxtoem(24);
                         margin-bottom: 19px;
@@ -209,7 +206,7 @@ header {
                     p {
                         max-width: 526px;
                         width: 90%;
-                        font-family: "Josefin Sans";
+
                         font-size: pxtoem(15);
                     }
                     img {
@@ -243,7 +240,6 @@ header {
                     align-items: center;
                 }
                 p {
-                    font-family: "Josefin Sans";
                     font-size: pxtoem(14);
                     color: $grayscale1;
                     margin-bottom: 15px;
@@ -262,7 +258,7 @@ header {
             color: $primary;
             border: 1px solid $primary;
             border-radius: 3px;
-            font-family: "Josefin Sans";
+
             font-size: pxtoem(14);
             font-weight: 300;
         }
@@ -272,7 +268,6 @@ header {
     margin-bottom: 100px;
     .title {
         h3 {
-            font-family: "Josefin Sans";
             font-size: pxtoem(32);
             font-weight: 300;
             text-align: center;
@@ -294,77 +289,7 @@ header {
             grid-template-columns: 1fr;
             grid-template-areas: "uno" "dos" "tres";
         }
-        .blog-item {
-            padding: 42px 37px;
-            border-radius: 6px;
-            box-shadow: 0 5px 10px rgba(62, 62, 62, 0.8);
-            &:first-child {
-                grid-area: uno;
-            }
-            &:nth-child(2) {
-                grid-area: dos;
-            }
-            &:last-child {
-                grid-area: tres;
-            }
-            .blog-title {
-                display: flex;
-                position: relative;
-                margin-bottom: 25px;
-                .blog-title__container {
-                    flex-direction: column;
-                    span {
-                        display: flex;
-                        align-items: center;
-                        font-family: "Josefin Sans";
-                        font-size: pxtoem(16);
-                        margin-bottom: 12px;
-                        color: $primary;
-                        p {
-                            margin-left: 10px;
-                            font-size: pxtoem(14);
-                            color: $grayscale2;
-                        }
-                    }
-                    p {
-                        font-family: "Josefin Sans";
-                        font-size: pxtoem(14);
-                        color: $grayscale2;
-                    }
-                }
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: -37px;
-                    width: 2px;
-                    height: 45px;
-                    background-color: $primary;
-                    border: 1.5px solid $primary;
-                }
-            }
-            .blog-head {
-                margin-bottom: 20px;
-                font-size: pxtoem(24);
-                font-weight: 300;
-                font-family: "Josefin Sans";
-            }
-            .blog-lorem {
-                font-size: pxtoem(15);
-                font-family: "Josefin Sans";
-                margin-bottom: 30px;
-            }
-            .blog-readMore {
-                padding: 13px 24px;
-                border-radius: 3px;
-                border: 1px solid $primary;
-                width: max-content;
-                font-family: "Josefin Sans";
-                font-size: pxtoem(14);
-                font-weight: 300;
-                color: $primary;
-                cursor: pointer;
-            }
-        }
+        @import "components/blog.scss";
     }
     .blog-flecha {
         text-align: center;
@@ -379,7 +304,6 @@ header {
     .gallery-items {
         .gallery-text {
             h2 {
-                font-family: "Josefin Sans";
                 font-size: pxtoem(32);
                 font-weight: 300;
                 text-align: center;
