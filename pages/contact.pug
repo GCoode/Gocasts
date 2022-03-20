@@ -2,10 +2,6 @@
 - const contactSpan = "Home / Contact"
 - const contactH2 = "Get In Touch"
 
-mixin get()
-    label 
-
-
 doctype html
 html(lang="es")
     head
@@ -26,6 +22,24 @@ html(lang="es")
                 .contact-container 
                     .contact-H2 
                         h2= contactH2
+                    .contact-form 
+                        .contact-form__first 
+                            label First Name
+                            input(type="text" placeholder="Your First Name")
+                        .contact-form__mail 
+                            label Your Email Adress
+                            input(type="email" placeholder="Your Email Address")
+                        .contact-form__business 
+                            label Your Reason Of Contact 
+                            input(type="text" placeholder="Business")
+                        .contact-form__lorem 
+                            label Start Writing From Here 
+                            input(type="text" placeholder="Lorem Ipsum is simply dummy text of the printing and...…….")
+                        .contact-form__last 
+                            label Last Name
+                            input(type="text" placeholder="Your last Name")
+                        button(type="submit") submit 
+        include components/footer            
 
 
 
