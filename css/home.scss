@@ -388,17 +388,46 @@ header {
             }
         }
         .gallery-photo {
-            .gallery-photo__container {
-                display: grid;
-                grid-template-areas:
-                    "uno dos tres cuato"
-                    "cinco dos seis siete"
-                    "ocho nueve diez siete";
-                img {
-                    
-                    &:last-child {
-                        display: none;
-                    }
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "uno dos tres cuatro"
+                "cinco dos seis siete"
+                "ocho nueve diez siete";
+            gap: 20px;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                &:first-child {
+                    grid-area: uno;
+                }
+                &:nth-child(2) {
+                    grid-area: dos;
+                }
+                &:nth-child(3) {
+                    grid-area: tres;
+                }
+                &:nth-child(4) {
+                    grid-area: cuatro;
+                }
+                &:nth-child(5) {
+                    grid-area: cinco;
+                }
+                &:nth-child(6) {
+                    grid-area: seis;
+                }
+                &:nth-child(7) {
+                    grid-area: siete;
+                }
+                &:nth-child(8) {
+                    grid-area: ocho;
+                }
+                &:nth-child(9) {
+                    grid-area: nueve;
+                }
+                &:nth-child(10) {
+                    grid-area: diez;
                 }
             }
         }
