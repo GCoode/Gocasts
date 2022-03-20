@@ -1,0 +1,68 @@
+@import "main";
+
+header {
+    padding-top: 43px;
+    background: url("../img/header/background-about.png") #f9f9f9 no-repeat;
+    @import "components/nav";
+    .blog {
+        text-align: center;
+        padding-bottom: 196px;
+        h1 {
+            text-decoration: underline;
+            margin-bottom: 11px;
+            font-size: pxtoem(42);
+        }
+        span {
+            font-size: pxtoem(14);
+        }
+    }
+}
+.blog-post {
+    .blog-post__container {
+        .blog-post__text {
+            margin-top: 90px;
+            h2 {
+                font-size: pxtoem(32);
+                font-weight: 300;
+                margin-bottom: 40px;
+                text-align: center;
+            }
+        }
+    }
+}
+.blog-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+    grid-template-areas:
+        "uno dos tres"
+        "cuatro cinco seis"
+        "siete ocho nueve";
+    @include break(1050px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "uno dos"
+            "tres tres"
+            "cuatro cinco"
+            "seis seis"
+            "siete ocho"
+            "nueve nueve";
+    }
+    @include break(633px) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "uno"
+            "dos"
+            "tres"
+            "cuatro"
+            "cinco"
+            "seis"
+            "siete"
+            "ocho"
+            "nueve";
+    }
+
+    @import "components/blog2.scss";
+}
+@import "components/footer.scss";
