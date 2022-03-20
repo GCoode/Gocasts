@@ -1,13 +1,35 @@
 - const gocasts = "GOCASTS"
+- const socials = ["img/footer/facebook.png", "img/footer/linked.png", "img/footer/instagram.png", "img/footer/skype.png"]
+- const listpages = ["About", "Episode", "Blog", "Contact"]
+- const listrecent = ["Episode 1", "Episode 2", "Episode 3", "Episode 4"]
 
 footer 
     .container 
-        .footer-logo 
-            img(src="img/footer/logo.png")
-            h2=gocasts 
-        .footer-lorem 
-            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
-        .footer-socials 
-            h3 socials 
-            .footer-socials__redes 
+        .footer-container 
+            .footer-logo 
+                img(src="img/footer/logo.png")
+                h2=gocasts 
+            .footer-lorem 
+                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
+            .footer-socials 
+                h3 socials 
+                    .footer-socials__redes 
+                        for redes in socials
+                            img(src=redes)
+            .footer-list__pages 
+                h3 pages 
+                ul.footer-ul__pages 
+                for pagesitems in listpages
+                    li: a(href="#")= pagesitems
+            .footer-list__recent 
+                h3 Recent Episodes
+                ul.footer-ul__recent 
+                for recentitems in listrecent
+                    li: a(href="#")= recentitems 
+            .footer-listen 
+                h3 Listen My Podcasts Also In
+                .footer-listen__container 
+                    img(src="img/footer/podcast")
+
+                
             
