@@ -1,0 +1,91 @@
+@import "main";
+
+header {
+    padding-top: 43px;
+    background: url("../img/header/background-about.png") #f9f9f9 no-repeat;
+    @import "components/nav.scss";
+    .contact-H1 {
+        text-align: center;
+        padding-bottom: 196px;
+        h1 {
+            text-decoration: underline;
+            margin-bottom: 11px;
+            font-size: pxtoem(42);
+        }
+        span {
+            font-size: pxtoem(14);
+        }
+    }
+}
+.contact {
+    .contact-container {
+        max-width: 870px;
+        width: 100%;
+        margin: 0 auto 100px;
+        padding: 50px 102px;
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(62, 62, 62, 0.8);
+        margin-top: -80px;
+        background-color: white;
+        @include break(1305px) {
+            box-shadow: 0 0 0;
+            margin-top: 0;
+        }
+        .contact-H2 {
+            font-size: pxtoem(32);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .contact-form {
+            .contact-form__first,
+            .contact-form__mail,
+            .contact-form__business,
+            .contact-form__lorem,
+            .contact-form__last {
+                display: flex;
+                flex-direction: column;
+                label {
+                    font-size: pxtoem(15);
+                    margin-bottom: 20px;
+                }
+                input,
+                textarea {
+                    resize: none;
+                    border-top: 0;
+                    border-left: 0;
+                    border-right: 0;
+                    padding: 19px 0;
+                    border-bottom: 1px solid $tertiary;
+                    margin-bottom: 38px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            
+            .contact-form-data {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                @include break(633px){
+                    grid-template-columns: 1fr ;
+                }
+            }
+            .contact-form__lorem{
+                textarea{
+                    height: 115px;
+                }
+            }
+            button {
+                background-color: $primary;
+                border: 0;
+                color: white;
+                padding: 14px 23px;
+                text-transform: capitalize;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+@import "components/footer.scss";

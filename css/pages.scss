@@ -8,6 +8,7 @@ header {
     width: 100%;
     max-width: 705px;
     margin: 0 auto;
+    margin-bottom: 100px;
     .pages-container {
         .pages-title {
             margin-bottom: 25px;
@@ -87,10 +88,117 @@ header {
             }
         }
         .pages-comments {
-            h3 {
+            margin-bottom: 40px;
+            h3.granada4 {
                 font-size: pxtoem(24);
                 font-weight: 300;
                 margin-bottom: 20px;
+            }
+            .comments-perfil {
+                display: flex;
+                align-items: center;
+                margin-left: 37px;
+                @include break(633px){
+                    margin-left: 0;
+                }
+                &::before,
+                &::after {
+                    content: "";
+                    background-color: $tertiary;
+                    height: 97px;
+                    width: 1px;
+                    margin: 0 10px;
+                }
+                img {
+                    margin-right: 5px;
+                }
+                .comments-perfil__items {
+                    h3 {
+                        font-size: pxtoem(16);
+                        font-weight: bold;
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: pxtoem(16);
+                        font-weight: 300;
+                        margin-bottom: 32px;
+                    }
+                    .comments-perfil__replay {
+                        display: flex;
+                        justify-content: space-between;
+                        .comments-perfil__replay-items {
+                            display: flex;
+                            align-items: center;
+                            border: 1px solid $primary;
+                            color: $primary;
+                            border-radius: 4px;
+                            padding: 5px 10px;
+                            cursor: pointer;
+                            span {
+                                margin-right: 4.8px;
+                            }
+                        }
+                        span {
+                            font-size: pxtoem(14);
+                        }
+                    }
+                }
+            }
+        }
+        .pages-leave {
+            h3 {
+                font-size: pxtoem(24);
+                font-weight: 300;
+                margin-bottom: 30px;
+            }
+            .pages-leave__form {
+                textarea {
+                    resize: none;
+                    width: 100%;
+                    height: 142px;
+                    padding: 25px;
+                    font-size: pxtoem(15);
+                    color: $grayscale2;
+                    border: 1px solid $grayscale2;
+                    border-radius: 4px;
+                    margin-bottom: 20px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                .pages-leave__form-items {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                    input {
+                        width: 100%;
+                        height: 48px;
+                        padding: 17px 20px;
+                        color: $grayscale2;
+                        border: 1px solid $grayscale2;
+                        border-radius: 4px;
+                        margin-bottom: 30px;
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                .pages-leave__form-1 {
+                    margin-bottom: 28px;
+                    input {
+                        margin-right: 9.6px;
+                    }
+                    span {
+                        font-size: pxtoem(14);
+                    }
+                }
+                .spanpostcomment {
+                    padding: 14px 22px;
+                    color: white;
+                    background-color: $primary;
+                    border-radius: 4px;
+                    margin-bottom: 100px;
+                }
             }
         }
     }
