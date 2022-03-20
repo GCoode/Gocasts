@@ -1,0 +1,59 @@
+@import "main";
+
+header {
+    padding-top: 43px;
+    background: url("../img/header/background-about.png") #f9f9f9 no-repeat;
+    @import "components/nav";
+    .episode-h1 {
+        text-align: center;
+        padding-bottom: 196px;
+        h1 {
+            text-decoration: underline;
+            margin-bottom: 11px;
+            font-size: pxtoem(42);
+        }
+        span {
+            font-size: pxtoem(14);
+        }
+    }
+}
+.podcast {
+    margin-top: -80px;
+    @include break(1305px) {
+        margin-top: 0;
+    }
+    @include break(490px) {
+        padding: 55px 0;
+    }
+    .podcast-container {
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(62, 62, 62, 0.8);
+        padding: 60px 77px;
+        border-radius: 8px;
+        margin-bottom: 100px;
+        @include break(1305px) {
+            box-shadow: 0 0 0;
+        }
+        .podcast-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 39px;
+            @include break(633px) {
+                flex-direction: column;
+            }
+            h2 {
+                font-weight: 300;
+                font-size: pxtoem(32);
+                @include break(633px) {
+                    margin-bottom: 10px;
+                    font-size: pxtoem(28);
+                }
+            }
+        }
+        .podcast-mixin {
+            @import "components/epi.scss";
+        }
+    }
+}
+@import "components/footer.scss";
