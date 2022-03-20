@@ -1,5 +1,7 @@
 - const titleAbout = "About Me" 
 - const homeAbout = "Home / About"
+- const aboutIco = ["../img/about-icon/1.png", "../img/about-icon/2.png", "../img/about-icon/3.png", "../img/about-icon/4.png", "../img/about-icon/5.png", "../img/about-icon/6.png", "../img/about-icon/7.png", "../img/about-icon/8.png", "../img/about-icon/9.png", "../img/about-icon/10.png", "../img/about-icon/11.png"]
+- const aboutH2 = "I Have Been Featured in"
 
 
 doctype html
@@ -28,8 +30,15 @@ html(lang="es")
                             p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
                             p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
                             p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                            
 
+        .about-ico 
+            .container 
+                .about-ico__container 
+                    .about-ico__container__text 
+                        h2= aboutH2
+                    .about-ico__container-photo 
+                        for ico in aboutIco 
+                            img(src=ico)
 
 
 
