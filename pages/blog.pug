@@ -1,34 +1,19 @@
-- const blogH1 = "Blog"
-- const spanHome = "Home / Blog"
-- const blogPosts = "Blog Posts"
-- const tituloblog = ["Global News Podcast Thai soldier kills many people a shooting rampage", "News hour - World HealthOrganization says a new coronavirus cases slowed", "Over to You - Programme face the axe substantial financial cutbacks", "Global News Podcast Thai soldier kills many people a shooting rampage", "News hour - World HealthOrganization says a new coronavirus cases slowed", "Over to You - Programme face the axe substantial financial cutbacks", "Global News Podcast Thai soldier kills many people a shooting rampage", "News hour - World HealthOrganization says a new coronavirus cases slowed", "Over to You - Programme face the axe substantial financial cutbacks"]
+extends main 
 
-include components/blog
-
-doctype html
-html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/blog.css")
-        title Blog
-    body 
-        header 
-            .container 
-                include components/nav
-                .blog 
-                    h1= blogH1
-                    span= spanHome
-        .blog-post 
-            .container 
-                .blog-post__container 
-                    .blog-post__text 
-                        h2= blogPosts
-                    .blog-items 
-                        for blog in tituloblog
-                            +blog(blog)
-        include components/footer
-
-                
+block head
+    link(rel="stylesheet", href="../css/blog.css")
+    title Blog
+block postNav
+    .blog 
+        h1= blogH1
+        span= spanHome
+block body
+    .blog-post 
+        .container 
+            .blog-post__container 
+                .blog-post__text 
+                    h2= blogPosts
+                .blog-items 
+                    for blog in tituloblog2
+                        +blog(blog)            
 

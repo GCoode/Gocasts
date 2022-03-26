@@ -1,86 +1,73 @@
-- const galleryitems = ["../img/gallery/1.png", "../img/gallery/2.png", "../img/gallery/3.png", "../img/gallery/4.png", "../img/gallery/5.png", "../img/gallery/6.png", "../img/gallery/7.png", "../img/gallery/8.png", "../img/gallery/9.png", "../img/gallery/10.png"]
+extends main
 
-- const podcasts = ['../img/podcast/dog.png', '../img/podcast/book.png', '../img/podcast/door.png'];
-- const podcastsTitle = ["Visiting my best friend's city for first time", 'An interesting read I definitely recommend', 'What if all my adventures go back home?']
+block head
+    link(rel="stylesheet", href="../css/home.css")
+    title Home
 
-- const tituloblog = ["Global News Podcast Thai soldier kills many people a shooting rampage", "News hour - World HealthOrganization says a new coronavirus cases slowed", "Over to You - Programme face the axe substantial financial cutbacks"]
+block postNav
+    .main-header 
+        .treding-header
+            .treding-episode 
+                img(src="../img/header/linea.png")
+                p Trending Episode 
+            .treding-h1__lorem 
+                h1 Dreams of an unique ideas scattered through a deserted.
+                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+            .play 
+                img(src="../img/header/play.png")
+            .listen-on 
+                p Listen On Also
+                img(src="../img/header/linea.png")
+            .apps 
+                .spotify 
+                    img(src="../img/header/spotify.png")
+                    .spotify-text 
+                        p Listen on 
+                        span spotify
+                .podcast 
+                    img(src="../img/header/podcast.png")
+                    .podcast-text 
+                        p Listen on
+                        span Google Podcasts 
+                .apple 
+                    img(src="../img/header/app.png")
+                    .apple-text 
+                        p Listen on 
+                        span Apple Podcasts
+        .people-header 
+            img(src="../img/header/people.png")
 
-include components/episode
-include components/blog
+block body
+    section 
+        .container 
+            .episode
+                .episode-title 
+                    h2 Latest Podcast Episodes
+                    p View All
+                .episode-items 
+                    for item, indice in podcasts
+                        +episode(item, podcastsTitle[indice])
+                .episode-show 
+                    span Show More Episode
 
-doctype html
-html(lang="es")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/home.css")
-        title Home 
-    body
-        header 
-            .container 
-                include components/nav
-                .main-header 
-                    .treding-header
-                        .treding-episode 
-                            img(src="../img/header/linea.png")
-                            p Trending Episode 
-                        .treding-h1__lorem 
-                            h1 Dreams of an unique ideas scattered through a deserted.
-                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                        .play 
-                            img(src="../img/header/play.png")
-                        .listen-on 
-                            p Listen On Also
-                            img(src="../img/header/linea.png")
-                        .apps 
-                            .spotify 
-                                img(src="../img/header/spotify.png")
-                                .spotify-text 
-                                    p Listen on 
-                                    span spotify
-                            .podcast 
-                                img(src="../img/header/podcast.png")
-                                .podcast-text 
-                                    p Listen on
-                                    span Google Podcasts 
-                            .apple 
-                                img(src="../img/header/app.png")
-                                .apple-text 
-                                    p Listen on 
-                                    span Apple Podcasts
-                    .people-header 
-                        img(src="../img/header/people.png")
-        section 
-            .container 
-                .episode
-                    .episode-title 
-                        h2 Latest Podcast Episodes
-                        p View All
-                    .episode-items 
-                        for item, indice in podcasts
-                            +episode(item, podcastsTitle[indice])
-                    .episode-show 
-                        span Show More Episode
-        article.blog_posts
-            .container
-                .title 
-                    h3 Blog Posts 
-                .blog-items 
-                    for blog in tituloblog
-                        +blog (blog)
-                .blog-flecha 
-                    img(src="../img/blog/left.png")
-                    img(src="../img/blog/right.png")
-        .gallery 
-            .container 
-                .gallery-items 
-                    .gallery-text 
-                        h2 Instagram feeds
-                    .gallery-photo 
-                        for gallery in galleryitems 
-                            .gallery-photo__container 
-                                img.photo-container__grid(src=gallery)
-                                .gallery-photo-container__grid-llave
-                                    img(src="../img/gallery/llave.png")
-        include components/footer 
+    article.blog_posts
+        .container
+            .title 
+                h3 Blog Posts 
+            .blog-items 
+                for blog in tituloblog
+                    +blog (blog)
+            .blog-flecha 
+                img(src="../img/blog/left.png")
+                img(src="../img/blog/right.png")
+    .gallery 
+        .container 
+            .gallery-items 
+                .gallery-text 
+                    h2 Instagram feeds
+                .gallery-photo 
+                    for gallery in galleryitems 
+                        .gallery-photo__container 
+                            img.photo-container__grid(src=gallery)
+                            .gallery-photo-container__grid-llave
+                                img(src="../img/gallery/llave.png")

@@ -1,52 +1,34 @@
-- const contactH1 = "Contact"
-- const contactSpan = "Home / Contact"
-- const contactH2 = "Get In Touch"
+extends main 
 
-doctype html
-html(lang="es")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/contact.css")
-        title Contact
-    body 
-        header 
-            .container 
-                include components/nav
-                .contact-H1 
-                    h1= contactH1
-                    span= contactSpan
-        .contact 
-            .container 
-                .contact-container 
-                    .contact-H2 
-                        h2= contactH2
-                    .contact-form 
-                        .contact-form-data 
-                            .contact-form__first 
-                                label First Name
-                                input(type="text" placeholder="Your First Name")
-                            .contact-form__last 
-                                label Last Name
-                                input(type="text" placeholder="Your last Name")
-                        .contact-form__mail 
-                            label Your Email Adress
-                            input(type="email" placeholder="Your Email Address")
-                        .contact-form__business 
-                            label Your Reason Of Contact 
-                            input(type="text" placeholder="Business")
-                        .contact-form__lorem 
-                            label Start Writing From Here 
-                            textarea(placeholder="Lorem Ipsum is simply dummy text of the printing and...…….")
-                        
-                        button(type="submit") submit 
-        include components/footer            
-
-
-
-
-
-
-
-
+block head
+    link(rel="stylesheet", href="../css/contact.css")
+    title Contact
+block postNav
+    .contact-H1 
+        h1= contactH1
+        span= contactSpan
+block body
+    .contact 
+        .container 
+            .contact-container 
+                .contact-H2 
+                    h2= contactH2
+                .contact-form 
+                    .contact-form-data 
+                        .contact-form__first 
+                            label First Name
+                            input(type="text" placeholder="Your First Name")
+                        .contact-form__last 
+                            label Last Name
+                            input(type="text" placeholder="Your last Name")
+                    .contact-form__mail 
+                        label Your Email Adress
+                        input(type="email" placeholder="Your Email Address")
+                    .contact-form__business 
+                        label Your Reason Of Contact 
+                        input(type="text" placeholder="Business")
+                    .contact-form__lorem 
+                        label Start Writing From Here 
+                        textarea(placeholder="Lorem Ipsum is simply dummy text of the printing and...…….")
+                    
+                    button(type="submit") submit 

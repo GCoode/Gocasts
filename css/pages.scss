@@ -98,7 +98,7 @@ header {
                 display: flex;
                 align-items: center;
                 margin-left: 37px;
-                @include break(633px){
+                @include break(633px) {
                     margin-left: 0;
                 }
                 &::before,

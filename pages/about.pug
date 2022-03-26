@@ -1,62 +1,47 @@
-- const titleAbout = "About Me" 
-- const homeAbout = "Home / About"
-- const tituloblog = ["Global News Podcast Thai soldier kills many people a shooting rampage", "News hour - World HealthOrganization says a new coronavirus cases slowed", "Over to You - Programme face the axe substantial financial cutbacks"]
-- const aboutIco = ["../img/about-icon/1.png", "../img/about-icon/2.png", "../img/about-icon/3.png", "../img/about-icon/4.png", "../img/about-icon/5.png", "../img/about-icon/6.png", "../img/about-icon/7.png", "../img/about-icon/8.png", "../img/about-icon/9.png", "../img/about-icon/10.png", "../img/about-icon/11.png"]
-- const aboutH2 = "I Have Been Featured in"
-- const aboutNewH2 = "Directly Into Your Inbox Every Monday"
-- const aboutBlogH2 = "Blog Posts"
+extends main 
 
-include components/blog
+block head
+    link(rel="stylesheet", href="../css/about.css")
+    title About
 
-doctype html
-html(lang="es")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        link(rel="stylesheet", href="../css/about.css")
-        title About
-    body 
-        header 
-            .container 
-                include components/nav
-                .about-h1
-                    h1= titleAbout
-                    span= homeAbout
-        .main 
-            .container 
-                .main-container 
-                    .main-people 
-                        img(src="../img/header/people-front.png")
-                    .main-text 
-                        h2 Hello There My Name is Gerry Castin And I Love To Talk (Most Of The Time)
-                        .main-text__p 
-                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-                            p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+block postNav
+    .about-h1
+        h1= titleAbout
+        span= homeAbout
 
-        .about-ico 
-            .container 
-                .about-ico__container 
-                    .about-ico__container__text 
-                        h2= aboutH2
-                    .about-ico__container-photo 
-                        for ico in aboutIco 
-                            img(src=ico)
-        .about-text 
-            .container 
-                .about-text__container 
-                    h2= aboutNewH2
-                    p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut dolore kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-                    .about-text__video 
-                        img(src="../img/about-icon/play.png")
-        .about-blog 
-            .container 
-                .about-blog__container 
-                    .about-blog__post 
-                        h2= aboutBlogH2
-                    .about-blog__mixin 
-                        for about in tituloblog 
-                            +blog(about)
-        footer 
-            include components/footer
+block body
+    .main 
+        .container 
+            .main-container 
+                .main-people 
+                    img(src="../img/header/people-front.png")
+                .main-text 
+                    h2 Hello There My Name is Gerry Castin And I Love To Talk (Most Of The Time)
+                    .main-text__p 
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                        p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+
+    .about-ico 
+        .container 
+            .about-ico__container 
+                .about-ico__container__text 
+                    h2= aboutH2
+                .about-ico__container-photo 
+                    for ico in aboutIco 
+                        img(src=ico)
+    .about-text 
+        .container 
+            .about-text__container 
+                h2= aboutNewH2
+                p Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut dolore kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                .about-text__video 
+                    img(src="../img/about-icon/play.png")
+    .about-blog 
+        .container 
+            .about-blog__container 
+                .about-blog__post 
+                    h2= aboutBlogH2
+                .about-blog__mixin 
+                    for about in tituloblog 
+                        +blog(about)

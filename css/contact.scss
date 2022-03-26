@@ -62,17 +62,17 @@ header {
                     }
                 }
             }
-            
+
             .contact-form-data {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap: 20px;
-                @include break(633px){
-                    grid-template-columns: 1fr ;
+                @include break(633px) {
+                    grid-template-columns: 1fr;
                 }
             }
-            .contact-form__lorem{
-                textarea{
+            .contact-form__lorem {
+                textarea {
                     height: 115px;
                 }
             }
